@@ -3,15 +3,24 @@
     $host = "localhost";
     $username = "root";
     $password = "";
-    $database_db = "php_blog_post";
+    $database_db = "blog_website";
 
     function connect() {
         global $host, $username, $password, $database_db;
-        $conn = new mysqli($host, $username, $password, $database_db);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
+
+        $conn = new mysqli($host,$username,$password,$database_db);
+
+        if($conn->connect_error){
+
+            die("connection failed ". $conn->connect_error);
+        }else{
+            return $conn;
         }
-        return $conn;
     }
     
+
+
+    function closeConnection($conn){
+        $conn->close();
+    }
 ?>

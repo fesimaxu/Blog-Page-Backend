@@ -1,6 +1,7 @@
 <?php
 // create user class and methods
 include_once './Connection.php';
+
 class User {
     private $conn;
     private $name;
