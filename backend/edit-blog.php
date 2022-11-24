@@ -3,9 +3,7 @@
 include './Connection.php';
 include './Blog.php';
 include './User.php';
-
-$post = new Blog();
-$user = new User();
+   
 ?>
 <html lang="en">
 <head>

@@ -25,7 +25,7 @@ class User {
         }
         else{
             //redirect to login page
-            header('Location: .');
+            header('Location:./login.php');
         }
     }
   
